@@ -30,7 +30,7 @@
         r.style.setProperty('--sub-primary', 'rgb(102, 102, 102)')
         r.style.setProperty('--primary-tran', 'rgba(17, 17, 17, 0.15)')
       }
-      window.mobileAndTabletCheck = function () {
+      const mobileAndTabletCheck = function () {
         let check = false
         ;(function (a) {
           if (
@@ -45,9 +45,9 @@
         })(navigator.userAgent || navigator.vendor || window.opera)
         return check
       }
-
+      localStorage.isMobile = mobileAndTabletCheck() ? '1' : ''
       function changeRootFontSize() {
-        if (window.mobileAndTabletCheck()) {
+        if (!!localStorage.isMobile) {
           r.style.setProperty('font-size', '10px')
           r.style.setProperty('min-width', '')
         } else {
@@ -63,8 +63,8 @@
         changeRootFontSize()
       })
     </script>
-    <script type="module" crossorigin src="./assets/index-s5xOL5RC.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-pM1IOs_E.css">
+    <script type="module" crossorigin src="./assets/index-cwBtB3Bx.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-9JFTajps.css">
   </head>
   <body>
     <div id="root"></div>
